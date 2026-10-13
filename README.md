@@ -82,9 +82,26 @@ The detailed rationale, assumptions, evidence requirements, limitations, and val
 
 The data model covers athlete, daily state, sleep, symptom, training session, exercise set, performance test, wearable metric, prediction, and outcome. SQLite keeps local development simple; setting `DATABASE_URL` switches the same persistence layer to PostgreSQL.
 
+## Download the macOS showcase
+
+If you want to explore the Lab without installing Python, Node.js, or developer tools, download my packaged macOS showcase:
+
+[Download ZeroedIn Performance Lab for macOS](https://github.com/Rhayko/zeroedin-performance-lab/releases/latest/download/ZeroedIn-Performance-Lab-macOS.zip)
+
+1. Download and unzip `ZeroedIn-Performance-Lab-macOS.zip`.
+2. Drag **ZeroedIn Performance Lab** into Applications if you want to keep it there.
+3. Because this portfolio build is not Apple-notarized, right-click the app the first time, choose **Open**, and confirm **Open**.
+4. The app starts a private server on this computer and opens `http://127.0.0.1:8000` in the default browser.
+5. Choose **Explore demo** for fictional data or **Set up locally** for an empty personal workspace.
+6. Quit **ZeroedIn Performance Lab** from the Dock when you are finished.
+
+The app stores its local database at `~/Library/Application Support/ZeroedIn Performance Lab/zeroedin.db`. Removing the app does not automatically remove that database. Export a JSON backup from the interface before deleting or moving records you want to preserve.
+
+The current downloadable build targets Intel-based Macs. Apple silicon users may be prompted to install Rosetta. A native Apple silicon and Windows release can follow after this showcase build is validated across those systems.
+
 ## Running it locally
 
-I use Python 3.11+ and Node 20+.
+The following setup is for developers who want to inspect or modify the source code. I use Python 3.11+ and Node 20+.
 
 After installing the dependencies once, I can build and launch the complete local application with one command:
 
