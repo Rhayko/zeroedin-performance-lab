@@ -1,0 +1,6 @@
+export type Athlete={id:number;name:string;sport:string;height_cm?:number;weight_kg?:number;training_age_years?:number;goals?:string;created_at:string}
+export type Point={date:string;value:number;rolling_average:number|null;deviation_from_baseline:number|null}
+export type Analytics={baseline:{state:string;days_observed:number;target_days:number;progress_percent:number;message:string};training_load:Point[];wellness:Point[];performance:Record<string,Point[]>;relationships:{x_metric:string;y_metric:string;observations:number;correlation:number|null;interpretation:string;analysis_type:string}[];scope_note:string}
+export type Session={id:number;performed_at:string;session_type:string;duration_minutes:number;session_rpe:number;notes?:string;sets:{exercise_name:string;set_number:number;reps:number;load_kg:number;rpe?:number;rir?:number}[]}
+export type PerformanceTest={id:number;performed_at:string;test_type:string;value:number;unit:string;protocol?:string}
+export type DailyState={id:number;recorded_date:string;fatigue:number;stress:number;motivation:number;perceived_recovery:number;notes?:string;sleep:{duration_hours:number;quality:number};symptoms:{body_region:string;symptom_type:string;severity:number}[]}

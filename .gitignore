@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.db
+.pytest_cache/
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+.coverage
+coverage/
+outputs/
+work/

@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: zeroedin
+      POSTGRES_USER: zeroedin
+      POSTGRES_PASSWORD: zeroedin
+    ports:
+      - "5432:5432"
+    volumes:
+      - zeroedin_data:/var/lib/postgresql/data
+
+volumes:
+  zeroedin_data:
+
