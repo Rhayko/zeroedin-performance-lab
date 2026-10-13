@@ -99,6 +99,10 @@ The app stores its local database at `~/Library/Application Support/ZeroedIn Per
 
 The current downloadable build targets Intel-based Macs. Apple silicon users may be prompted to install Rosetta. A native Apple silicon and Windows release can follow after this showcase build is validated across those systems.
 
+### Windows users
+
+Windows users can run the same V1 locally from the source code. I provide a separate [step-by-step Windows setup guide](WINDOWS_SETUP.md) with Windows PowerShell commands, local privacy details, and troubleshooting. This is the recommended Windows option until I can validate a packaged Windows release on Windows hardware.
+
 ## Running it locally
 
 The following setup is for developers who want to inspect or modify the source code. I use Python 3.11+ and Node 20+.
