@@ -6,8 +6,8 @@ I designed ZeroedIn Performance Lab so Windows users can run the same applicatio
 
 Install these two tools before beginning:
 
-1. [Python 3.11 or newer](https://www.python.org/downloads/windows/) — select **Add python.exe to PATH** during installation.
-2. [Node.js 20 LTS or newer](https://nodejs.org/en/download) — the standard Windows installer is appropriate.
+1. [Python 3.12](https://www.python.org/downloads/windows/) — choose the current Python 3.12.x Windows installer and select **Add python.exe to PATH** during installation.
+2. [Node.js 22 LTS or newer](https://nodejs.org/en/download) — the standard Windows installer is appropriate.
 
 You do not need PostgreSQL, Docker, an AI service, or a cloud account for the local showcase.
 
@@ -16,17 +16,17 @@ You do not need PostgreSQL, Docker, an AI service, or a cloud account for the lo
 1. Open the [ZeroedIn Performance Lab repository](https://github.com/Rhayko/zeroedin-performance-lab).
 2. Select **Code**, then **Download ZIP**.
 3. Open your Downloads folder and choose **Extract All**. Do not run the project from inside the ZIP preview.
-4. Open the extracted `zeroedin-performance-lab` folder.
-5. Right-click an empty area in that folder and choose **Open in Terminal**.
+4. Open the extracted `zeroedin-performance-lab-main` folder. GitHub adds `-main` to the source ZIP folder name.
+5. Right-click an empty area in that folder and choose **Open in Terminal**. On an older Windows version, click the folder address bar, enter `powershell`, and press Enter.
 
 ## Install the local dependencies
 
 Copy and run each command in Windows PowerShell:
 
 ```powershell
-py -3 -m venv .venv
+py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r backend\requirements.txt
-npm --prefix frontend install
+npm --prefix frontend ci
 ```
 
 The first installation downloads the project’s Python and JavaScript packages. It can take several minutes depending on the connection.
@@ -53,7 +53,7 @@ Do not enter classified, operationally restricted, medical, or other sensitive i
 
 ## Common Windows issues
 
-- **`py` is not recognized:** reinstall Python and select **Add python.exe to PATH**, then open a new terminal.
+- **`py` or Python 3.12 is not recognized:** install the current Python 3.12.x Windows release, select **Add python.exe to PATH**, and then open a new terminal.
 - **`npm` is not recognized:** install the current Node.js LTS release, then open a new terminal.
 - **Port 8000 is already in use:** close another running copy of the Lab, then run the start command again.
 - **The browser did not open:** visit [http://127.0.0.1:8000](http://127.0.0.1:8000) manually while the terminal is still running.
